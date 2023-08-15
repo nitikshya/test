@@ -74,6 +74,9 @@ console.log(calculatefoodtotal(1000,10))*/
 
 //arrow function
 //arrow functon with explicit return
+
+
+/*
 const sumArrow = (a,b) =>
 {
   return a+b
@@ -200,6 +203,7 @@ const sumarray=(numbers) =>{
 const nums=[1,2,3,4,5]
 //console.log(sumarray(nums))
 
+// max function
 const max=(numbers) =>{
   let result=numbers[0]
   for(const number of numbers){
@@ -209,4 +213,54 @@ const max=(numbers) =>{
   }
   return {result}
 }
-console.log(max([10,2,3,4,5]))
+console.log(max([10,2,3,4,5])) */
+
+const lettercount=(phrase) =>{
+  console.log(phrase)
+  let count ={}
+  for(const letter of phrase){
+    if(letter in count){
+      count[letter]++   // count[letter]=count[letter]+1
+    }
+    else{
+      count[letter]=1
+    }
+    console.log(letter)
+  }
+  return(count)
+}
+//console.log(lettercount('nitikshya'))
+
+//letter count
+const wordfrequency=(word)=>{
+  let frequency={}
+  rate =word.split(' ')
+  for(const world of rate){
+    //console.log(world)
+    if (world in frequency){
+      frequency[world]++
+    }else{
+      frequency[world]=1
+    }
+  }
+  //console.log(rate)
+  return frequency
+}
+//const userinput=prompt('write your sentence.')
+//console.log(wordfrequency(userinput))
+
+// array sorting
+let numbers=[0,1,2,4,5,8,9,66,44,5,3334]
+numbers.sort((a,b) => {
+  if(a>b) return 1;
+  if(a<b) return -1;
+})
+//console.log(numbers)
+
+// higher order function(map,filter,reduce) 
+
+//MAP=====loop and returns to array
+let result=[1,2,3,4,5,6,7,8,9].map (number=>number**2)
+console.log(result)
+
+
