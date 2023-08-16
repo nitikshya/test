@@ -11,3 +11,26 @@ numbers.sort((a,b) => {
 //MAP=====loop and returns to array
 let result=[1,2,3,4,5,6,7,8,9].map (number=>number**2)
 console.log(result)
+
+//FILTER=====loops and returns with and matching array
+const filter=(numbers,compareno)=>{
+  let result=[]
+  for(const number of numbers){
+    if(number>compareno){
+      result.push(number)
+    }
+  }
+  return result
+}
+console.log(filter([1,2,3,4,5,6],3))
+
+//reduce 
+const nms=[1,2,3]
+const ress=nms.reduce((a,b)=>a*b)
+//console.log(ress)
+
+const time= (actors.map(actor=>actor.networth).reduce((a,b)=>a+b))
+//console.log(time)
+
+const tim= (actors.reduce((a,b)=>a+b.networth,0))
+//console.log(tim)

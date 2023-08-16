@@ -261,6 +261,89 @@ numbers.sort((a,b) => {
 
 //MAP=====loop and returns to array
 let result=[1,2,3,4,5,6,7,8,9].map (number=>number**2)
-console.log(result)
+//console.log(result)
+
+const double=(numbers)=>{
+  return numbers.map(number=>number*2)
+}
+//console.log(double([1,2,3]))
+
+//FILTER====loops and returns with and matching array
+//without using .filter method
+const filter=(numbers,compareno)=>{
+  let result=[]
+  for(const number of numbers){
+    if(number>compareno){
+      result.push(number)
+    }
+  }
+  return result
+}
+//console.log(filter([1,2,3,4,5,6],3))
+
+//using .filter method
+const nums=[1,2,3,4,5,6,7,8,9]
+//console.log(nums.filter(num=>num>6||num<2))
+
+const actors=[ 
+  {name:'henry',networth:90000000},
+  {name:'siddharth', networth: 3000000},
+  {name:'scarlet',networth:5000000},
+  {name:'margot',networth:9000000}
+]
+let results= (actors.filter(actor=>actor.name))
+//console.log(results)
+
+let res= (actors.map(actor=>actor.name))
+//console.log(res)
+ 
+let resu= (actors.map(actor=>actor.networth))
+//console.log(resu)
+
+//reduce 
+const nms=[1,2,3]
+const ress=nms.reduce((a,b)=>a*b)
+//console.log(ress)
+
+const time= (actors.map(actor=>actor.networth).reduce((a,b)=>a+b))
+//console.log(time)
+
+const tim= (actors.reduce((a,b)=>a+b.networth,0))
+//console.log(tim)
+
+let title= document.getElementById('title')
+console.log('before:',title.innerText)
+title.innerText='Hey! there. Are you alright?'
+console.log('after:',title.innerText)
+//console.log(innerText.style.colour='red')
 
 
+// let redDiv= document.getElementById('red')
+// let yellowDiv= document.getElementById('yellow')
+// let greenDiv= document.getElementById('green')
+
+const square= document.querySelectorAll('.colorsquare')
+console.log(square)
+
+//console.log(square[0].value)
+//console.log(square[1].value)
+//console.log(square[2].value)
+
+//for each loop
+
+const timeclicked={'red':0,'yellow':0,'green':0}
+square.forEach(square=>{
+  square.onclick=()=>{
+    timeclicked[square.value]++
+   square.innerText=timeclicked[square.value]
+  }
+  //square.onclick=()=>console.log(square.id)
+})
+
+const cleargameButton=document.getElementById('clear')
+cleargameButton.onclick=()=>clearscore()
+
+
+function clearscore(){
+  square.forEach(square=>square.innerText=' ')
+}
