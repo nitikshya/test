@@ -311,39 +311,54 @@ const time= (actors.map(actor=>actor.networth).reduce((a,b)=>a+b))
 const tim= (actors.reduce((a,b)=>a+b.networth,0))
 //console.log(tim)
 
-let title= document.getElementById('title')
-console.log('before:',title.innerText)
-title.innerText='Hey! there. Are you alright?'
-console.log('after:',title.innerText)
-//console.log(innerText.style.colour='red')
+// let title= document.getElementById('title')
+// console.log('before:',title.innerText)
+// title.innerText='Hey! there. Are you alright?'
+// console.log('after:',title.innerText)
+// //console.log(innerText.style.colour='red')
 
 
-// let redDiv= document.getElementById('red')
-// let yellowDiv= document.getElementById('yellow')
-// let greenDiv= document.getElementById('green')
+// // let redDiv= document.getElementById('red')
+// // let yellowDiv= document.getElementById('yellow')
+// // let greenDiv= document.getElementById('green')
 
-const square= document.querySelectorAll('.colorsquare')
-console.log(square)
+// const square= document.querySelectorAll('.colorsquare')
+// console.log(square)
 
-//console.log(square[0].value)
-//console.log(square[1].value)
-//console.log(square[2].value)
+// //console.log(square[0].value)
+// //console.log(square[1].value)
+// //console.log(square[2].value)
 
-//for each loop
+// //for each loop
 
-const timeclicked={'red':0,'yellow':0,'green':0}
-square.forEach(square=>{
-  square.onclick=()=>{
-    timeclicked[square.value]++
-   square.innerText=timeclicked[square.value]
-  }
-  //square.onclick=()=>console.log(square.id)
-})
+// const timeclicked={'red':0,'yellow':0,'green':0}
+// square.forEach(square=>{
+//   square.onclick=()=>{
+//     timeclicked[square.value]++
+//    square.innerText=timeclicked[square.value]
+//   }
+//   //square.onclick=()=>console.log(square.id)
+// })
 
-const cleargameButton=document.getElementById('clear')
-cleargameButton.onclick=()=>clearscore()
+// const cleargameButton=document.getElementById('clear')
+// cleargameButton.onclick=()=>clearscore()
 
 
-function clearscore(){
-  square.forEach(square=>square.innerText=' ')
-}
+// function clearscore(){
+//   timesClicked.red=0
+//   timesClicked.yellow=0
+//   timesClicked.green=0
+//   squares.forEach(square=>
+//     square.innerText=' '
+//       )
+// }
+
+// function clearscore(){
+//   square.forEach(square=>square.innerText=' ')
+// }
+
+
+
+
+
+const timeclicked={'calculateBill':0,'tip':0,'increasePeople':0,'decreasePeople':0}
