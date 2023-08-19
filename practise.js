@@ -357,8 +357,28 @@ const tim= (actors.reduce((a,b)=>a+b.networth,0))
 //   square.forEach(square=>square.innerText=' ')
 // }
 
+const randomFruits=(fruits)=>{
+  const randomNumber= Math.floor(Math.random() * fruits.length)
+  return fruits[randomNumber]
+   }
 
+ fruits=['🍒','🍑','🍐','🍏','🍎','🍋','🍊','🍌']
+console.log(randomFruits(fruits))
 
-
-
-const timeclicked={'calculateBill':0,'tip':0,'increasePeople':0,'decreasePeople':0}
+const weatherScore=(weather,weather2)=>{
+  let score
+  if(weather=='rainy'&& weather2=='overcast'){
+    score=2
+  }
+  else if(weather=='sunny'){
+    score=-1
+  }
+  else if(weather=='rainy'){
+    score=1
+  }
+  else{
+    score=0
+  }
+  return(score)
+}
+console.log(weatherScore('rainy'))
