@@ -382,3 +382,5 @@ const weatherScore=(weather,weather2)=>{
   return(score)
 }
 console.log(weatherScore('rainy'))
+
+
