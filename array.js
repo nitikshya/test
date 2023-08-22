@@ -46,4 +46,3 @@ const introduction=(name,work,income,expense)=>{
   return intro
 }
 
-
