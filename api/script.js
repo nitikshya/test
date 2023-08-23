@@ -25,7 +25,11 @@ let comic=(id,name)=>{
    .then(response=>response.json())
    .then(json=>{
       //console.log(json)
-      heroimageDiv.innerHTML += `<img src=${json.image.url} height=250 width=250 />`
+      const name=`<h2>${json.name}</h2>`
+      const power=`<p>Intelligence:${json.powerstats.intelligence}</p>`
+      const speed=`<p>Speed:${json.powerstats.speed}</p>`
+      heroimageDiv.innerHTML = 
+      `${name}  <img src=${json.image.url} height=250 width=250 />${power} ${speed}`
    })
 }
 // comic(25)
@@ -34,3 +38,22 @@ let randomnumber= () =>{
    return Math.floor(Math.random()*num)+1
 }
 heroo.onclick= ()=>comic(randomnumber())
+
+const heroButton=document.getElementById('heroButton')
+const searchinput=document.getElementById('searchinput')
+//searchinput.innerText=
+const searchhero=(name)=>{
+   console.log(searchinput.value)
+fetch(`${baseurl}/search/${name}`)
+   .then(response=>response.json())
+   .then(json=>{
+      const hero=json.results[0]
+      console.log(hero)
+      heroimageDiv.innerHTML = `<img src=${hero.image.url} height=250 width=250 />`
+   })
+}
+heroButton.onclick=()=>searchhero(searchinput.value)
+
+const statsHTML=(character)=>{
+
+}
