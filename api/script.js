@@ -11,12 +11,12 @@
 //    })
 // }
 // dog.onclick=()=> click()
-//heroimageDiv.innerHTML=`<img src='${json.message}' height=250,width=250/>`
+
 
 
 //superheroes
-const heroimage=document.getElementById('heroimage')
-const hero=document.getElementById('hero')
+const heroimageDiv=document.getElementById('heroimage')
+const heroo=document.getElementById('heroo')
 
 const superherotoken='1793509237732044'
 const baseurl=`https://superheroapi.com/api.php/${superherotoken}`
@@ -25,10 +25,12 @@ let comic=(id,name)=>{
    .then(response=>response.json())
    .then(json=>{
       //console.log(json)
-      document.querySelector('body').innerHTML+= `<img src="${json.image.url}" height=250 width=250 />`
+      heroimageDiv.innerHTML += `<img src=${json.image.url} height=250 width=250 />`
    })
 }
+// comic(25)
 let randomnumber= () =>{
-   return Math.floor(Math.random*731)
+   const num=731
+   return Math.floor(Math.random()*num)+1
 }
-hero.onclick= ()=>comic(randomnumber())
+heroo.onclick= ()=>comic(randomnumber())
