@@ -49,7 +49,10 @@ fetch(`${baseurl}/search/${name}`)
    .then(json=>{
       const hero=json.results[0]
       console.log(hero)
-      heroimageDiv.innerHTML = `<img src=${hero.image.url} height=250 width=250 />`
+      const name=`<h2>${json.name}</h2>`
+      const power=`<p>Intelligence:${json.powerstats.intelligence}</p>`
+      const speed=`<p>Speed:${json.powerstats.speed}</p>`
+      heroimageDiv.innerHTML = `<img src=${hero.image.url} height=250 width=250 />${power} ${speed}`
    })
 }
 heroButton.onclick=()=>searchhero(searchinput.value)
