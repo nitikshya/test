@@ -363,7 +363,7 @@ const randomFruits=(fruits)=>{
    }
 
  fruits=['🍒','🍑','🍐','🍏','🍎','🍋','🍊','🍌']
-console.log(randomFruits(fruits))
+//console.log(randomFruits(fruits))
 
 const weatherScore=(weather,weather2)=>{
   let score
@@ -381,6 +381,6 @@ const weatherScore=(weather,weather2)=>{
   }
   return(score)
 }
-console.log(weatherScore('rainy'))
+//console.log(weatherScore('rainy'))
 
 
